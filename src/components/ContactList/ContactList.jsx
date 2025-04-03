@@ -1,15 +1,20 @@
+import React from "react";
 import s from "./ContactList.module.css";
 import Contact from "../Contact/Contact";
 
-function ContactList({ contacts = [] }) {
+function ContactList({ contacts, onDelete }) {
   return (
-    <ul>
+    <u>
       {contacts.map((contact) => (
-        <li key={contact.id}>
-          <Contact name={contact.name} number={contact.number} />
-        </li>
+        <Contact
+          key={contact.id}
+          name={contact.name}
+          number={contact.number}
+          onDelete={onDelete}
+        />
       ))}
-    </ul>
+    </u>
   );
 }
 export default ContactList;
+

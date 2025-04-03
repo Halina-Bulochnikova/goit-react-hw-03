@@ -1,9 +1,15 @@
-const Contact = ({ name, number}) => {
+import React from "react";
+import { FaUserAlt } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
+
+const Contact = ({ id, name, number, onDelete }) => {
   return (
-    <div>
-      <p>{name}</p>
-      <p>{number}</p>
-    </div>
+    <li>
+      <FaUserAlt /> {name} <FaPhone /> {number}
+      <button onClick={() => onDelete(id)}>
+        DELETE
+      </button>
+    </li>
   );
 };
 
