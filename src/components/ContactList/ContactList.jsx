@@ -1,19 +1,20 @@
 import React from "react";
-import s from "./ContactList.module.css";
+import css from "./ContactList.module.css";
 import Contact from "../Contact/Contact";
 
 function ContactList({ contacts, onDelete }) {
   return (
-    <u>
+    <ul className={css.contaktList}>
       {contacts.map((contact) => (
         <Contact
           key={contact.id}
+          id={contact.id}
           name={contact.name}
           number={contact.number}
           onDelete={onDelete}
         />
       ))}
-    </u>
+    </ul>
   );
 }
 export default ContactList;

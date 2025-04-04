@@ -47,4 +47,8 @@
   justify-content: center;
   padding: 20px;
   background-color: #f8f9fa;
+  min-width: 1140px;
+}
+.title {
+  margin-bottom: 20px;
 }
