@@ -2,7 +2,7 @@ import React from "react";
 import css from "./SearchBox.module.css";
   
 
-const SearchBox = ({ filter = " ", onFilterChange }) => {
+const SearchBox = ({ filter, onFilterChange }) => {
   return (
     <div className={css.searchBlock}>
       <label className={css.searchLabel}>

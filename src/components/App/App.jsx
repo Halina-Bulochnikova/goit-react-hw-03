@@ -13,7 +13,7 @@ const App = () => {
   };
 
   const [contacts, setContacts] = useState(loadContactsFromLocalStorage);
-  const [filter, setFilter] = useState(" ");
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     localStorage.setItem("contacts", JSON.stringify(contacts));
